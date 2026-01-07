@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge Consultancy - Turning Potential into Profession</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div id="about-image">
+                    <div id="image-placeholder">
+                        <!-- Replace "MZ.jpeg" with actual image file name -->
+                        <img src="/assets/sb.jpeg" alt="Developer" />
+                    </div>
+                    <div class="logo-text">
+                    <h1>SkillBridge Consultancy</h1>
+                    <p>Turning Potential into Profession</p>
+                </div>
+            </div>
+    
+<!-- Menu list for desktop and mobile -->
+        <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#programs">Internship Programs</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+  <a href="javascript:void(0)" onclick="openVerifyPopup()">
+    Verify Certificate
+  </a>
+</li>
+
+            </ul>
+            
+            <button class="get-started-btn" onclick="window.location.href='#contact'">Get Started</button>
+
+            <!-- hamberger icons visible on small screen -->
+            <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+<script>
+    /* ------------- NAVBAR: MOBILE MENU TOGGLE ------------- */
+
+        // Select hamburger icon and navigation menu list
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        // When hamburger is clicked, toggle "active" class on both elements
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // When any nav link is clicked, close the mobile menu (better UX)
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+</script>
+        
+    </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <span class="hero-tag">Your Career Partner</span>
+                    <h1 class="hero-title">Turning Potential into Profession</h1>
+                    <p class="hero-description">Transform your career aspirations into reality with industry-leading
+                        internship programs in IT and Business Administration.</p>
+                    <div class="hero-buttons">
+                        <a href="#programs" class="btn-primary">Explore Programs →</a>
+                        <a href="#contact" class="btn-secondary">Contact Us</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Students Trained</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Programs</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+
+        <div class="hero-image">
+            <div class="about-image">
+                    <div class="image-placeholder">
+                        <!-- Replace "MZ.jpeg" with actual image file name -->
+                        <img src="/assets/sb01.jpeg" alt="SB Image" />
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <span class="section-tag">About Us</span>
+            <h2 class="section-title">Bridging Dreams to Reality</h2>
+            <p class="section-description">SkillBridge Consultancy is a premier training and development organization
+                dedicated to bridging the gap between academic learning and professional expertise. We specialize in
+                providing comprehensive internship programs across IT and Business Administration domains, empowering
+                students and fresh graduates to excel in their careers.</p>
+
+            <div class="about-cards">
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to transform potential into profession by offering industry-relevant training,
+                        mentorship, and hands-on exposure that prepares candidates for real-world challenges.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Why Choose Us</h3>
+                    <p>We combine academic excellence with practical industry experience, guided by mentors who are
+                        leaders in their fields. Our comprehensive approach ensures you're job-ready from day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Industry Mentorship</h3>
+                    <p>Learn from experienced professionals with real industry exposure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Hands-on Project Exposure</h3>
+                    <p>Work on guided projects and real-world examples that strengthen practical understanding.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Certificate of Completion</h3>
+                    <p>Receive an internship certificate upon successful completion of the program.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Career Guidance</h3>
+                    <p>Get support in resume building, interview preparation, and career planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <span class="section-tag">Our Programs</span>
+            <h2 class="section-title">Internship Programs</h2>
+            <p class="section-description">Choose from our comprehensive range of internship programs designed to make
+                you industry-ready</p>
+
+          <h3 class="domain-title">IT Domain Programs</h3>
+
+<div class="domain-section">
+    <div class="domain-list">
+
+        <button class="domain-card" onclick="window.location.href='/domain/fullstack.html'">
+            <div class="domain-icon">🎓</div>
+            <p class="domain-title-text">Full Stack Web Development</p>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>End-to-end frontend & backend web application development.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">HTML</span>
+                <span class="domain-tag">CSS</span>
+                <span class="domain-tag">JavaScript</span>
+                <span class="domain-tag">React</span>
+                <span class="domain-tag">Node.js</span>
+                <span class="domain-tag">MongoDB</span>
+            </div>
+        </button>
+
+
+        <button class="domain-card" onclick="window.location.href='/domain/frontend.html'">
+            <div class="domain-icon">🎨</div>
+            <div class="domain-title-text">Frontend Web Development</div>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Modern UI development with responsive and interactive design.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">HTML</span>
+                <span class="domain-tag">CSS</span>
+                <span class="domain-tag">JavaScript</span>
+                <span class="domain-tag">React</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/backend.html'">
+            <div class="domain-icon">🛠️</div>
+            <div class="domain-title-text">Backend Development</div>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Server-side logic, APIs, authentication, and databases.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Node.js</span>
+                <span class="domain-tag">Express</span>
+                <span class="domain-tag">MongoDB</span>
+                <span class="domain-tag">SQL</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/ai.html'">
+            <div class="domain-icon">🤖</div>
+            <div class="domain-title-text">AI / Machine Learning</div>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Build intelligent models using real-world datasets.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Python</span>
+                <span class="domain-tag">Machine Learning</span>
+                <span class="domain-tag">NLP</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/datascience.html'">
+            <div class="domain-icon">📊</div>
+            <div class="domain-title-text">Data Science / Data Analytics</div>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Data analysis, visualization & predictive insights.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Python</span>
+                <span class="domain-tag">Pandas</span>
+                <span class="domain-tag">SQL</span>
+                <span class="domain-tag">Statistics</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/appdevelopment.html'">
+            <div class="domain-icon">📱</div>
+            <div class="domain-title-text">App Development</div>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Native & cross-platform mobile app development.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Android</span>
+                <span class="domain-tag">Flutter</span>
+                <span class="domain-tag">React Native</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/uiux.html'">
+            <div class="domain-icon">🖌️</div>
+            <div class="domain-title-text">UI / UX Design</div>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>User-centered design, wireframes & prototypes.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Figma</span>
+                <span class="domain-tag">Wireframing</span>
+                <span class="domain-tag">Prototyping</span>
+            </div>
+        </button>
+    </div>
+
+    <h3 class="domain-title">Business Domain Programs</h3>
+   <div class="domain-section">
+    <div class="domain-list">
+
+        <button class="domain-card" onclick="window.location.href='/domain/digital-marketing.html'">
+            <div class="domain-icon">📢</div>
+            <p class="domain-title-text">Digital Marketing</p>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Online marketing strategies to grow brands and businesses.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">SEO</span>
+                <span class="domain-tag">Social Media</span>
+                <span class="domain-tag">Google Ads</span>
+                <span class="domain-tag">Content Marketing</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/financial-analysis.html'">
+            <div class="domain-icon">💰</div>
+            <p class="domain-title-text">Financial Analysis</p>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Analyze financial data to support business decisions.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Financial Statements</span>
+                <span class="domain-tag">Excel</span>
+                <span class="domain-tag">Budgeting</span>
+                <span class="domain-tag">Forecasting</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/business-operations.html'">
+            <div class="domain-icon">⚙️</div>
+            <p class="domain-title-text">Business Operations</p>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Understand and manage daily business processes efficiently.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Process Management</span>
+                <span class="domain-tag">Supply Chain</span>
+                <span class="domain-tag">Operations Strategy</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/marketing-research.html'">
+            <div class="domain-icon">📊</div>
+            <p class="domain-title-text">Marketing Research</p>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Market analysis and consumer behavior insights.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Market Study</span>
+                <span class="domain-tag">Surveys</span>
+                <span class="domain-tag">Data Interpretation</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/entrepreneurship.html'">
+            <div class="domain-icon">🚀</div>
+            <p class="domain-title-text">Entrepreneurship & Startup Management</p>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Build, manage, and scale startup ventures.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Business Models</span>
+                <span class="domain-tag">Startup Strategy</span>
+                <span class="domain-tag">Pitch Deck</span>
+            </div>
+        </button>
+
+        <button class="domain-card" onclick="window.location.href='/domain/business-analytics.html'">
+            <div class="domain-icon">📈</div>
+            <p class="domain-title-text">Business Analytics & Data Basics</p>
+            <div class="domain-duration">Duration: 1–3 Months</div>
+            <p>Data-driven decision-making using business metrics.</p>
+            <div class="domain-tags">
+                <span class="domain-tag">Excel</span>
+                <span class="domain-tag">Basic SQL</span>
+                <span class="domain-tag">Data Visualization</span>
+                <span class="domain-tag">KPIs</span>
+            </div>
+        </button>
+    </div>
+</div>
+</div>
+<br>
+<section id="contact" class="contact">
+    <div class="container">
+
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Start Your Journey Today</h2>
+        <p class="section-description">
+            Have questions? We're here to help you choose the right program
+        </p>
+
+        <div class="contact-container">
+
+            <!-- LEFT: FORM -->
+            <div class="contact-form">
+                
+    <h2>Send Us a Message</h2>
+    <p>Fill out the form and we'll get back to you within 24 hours</p>
+
+<form 
+  action="https://formspree.io/f/xrebnked"
+  method="POST"
+>
+    <div class="form-group">
+        <label>Full Name *</label>
+        <input 
+            type="text" 
+            name="name"
+            placeholder="Enter your full name" 
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label>Phone Number *</label>
+        <input 
+            type="tel" 
+            name="phone"
+            placeholder="Enter your phone number" 
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label>Email Address *</label>
+        <input 
+            type="email" 
+            name="email"
+            placeholder="Enter your email address" 
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label>Message *</label>
+        <textarea 
+            name="message"
+            placeholder="Tell us what you want to learn..." 
+            required
+        ></textarea>
+    </div>
+
+    <!-- Extra metadata (recommended) -->
+    <input type="hidden" name="_subject" value="New Contact from SkillBridge Website">
+    <input type="hidden" name="_template" value="table">
+
+    <button type="submit" class="submit-btn">
+        Send Message →
+    </button>
+</form>
+
+</div>
+           
+
+            <!-- RIGHT: INFO -->
+            <div class="contact-info-container">
+
+                <div class="info-card">
+                    <h3>Office Location</h3>
+                    <p>VIP Road, Vadodara 390019, Gujarat, India</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> contact@skillbridgeconsultancy.in</p>
+                    <p><strong>Phone:</strong> +91 8799415602</p>
+                    <p><strong>Office Hours:</strong><br>
+                        Monday – Friday: 9:00 AM – 5:00 PM
+                    </p>
+                </div>
+
+                <div class="cta-card">
+                    <h3>Ready to Begin?</h3>
+                    <p>
+                        Join hundreds of successful graduates who transformed their careers with us.
+                    </p>
+                    <a href="#programs" class="cta-btn">View All Programs</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-content">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <div class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <!-- Replace "MZ.jpeg" with actual image file name -->
+                        <img src="/assets/sb.jpeg" alt="Developer" />
+                    </div>
+                </div>
+
+            <h3>SkillBridge Consultancy</h3>
+            <p class="footer-tagline">Turning Potential into Profession</p>
+            <p class="footer-desc">
+                Empowering the next generation of professionals through quality training and mentorship.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#programs">Internship Programs</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <a href="mailto:contact@skillbridgeconsultancy.in" style="color:inherit; text-decoration:none;">
+    📧 contact@skillbridgeconsultancy.in
+</a>
+<br>
+            <a href="tel:+918799415602" style="color:inherit; text-decoration:none;">
+           📞 +91 8799415602
+</a>
+
+            <p>📍 VIP Road, Vadodara 390019, Gujarat, India</p>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="footer-socials">
+    <!-- LinkedIn -->
+    <a href="#" title="LinkedIn" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM8 7h4.8v2.3h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.2 3.4 6.2 7.8V24h-5v-7.5c0-1.8 0-4.2-2.6-4.2s-3 2-3 4V24H8V7z"/>
+        </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=61586493890046" title="Facebook" aria-label="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.49v-9.294H9.691V11.01h3.125V8.41c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.314h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/>
+        </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/message/7XD6UM52COF5K1" title="WhatsApp" aria-label="WhatsApp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.52 3.48A11.78 11.78 0 0 0 12.02 0C5.4 0 0 5.4 0 12c0 2.12.55 4.18 1.6 6.01L0 24l6.16-1.62A11.93 11.93 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.25-6.2-3.48-8.52zM12 22c-1.92 0-3.79-.51-5.42-1.47l-.39-.23-3.65.96.97-3.56-.25-.37A9.93 9.93 0 0 1 2 12C2 6.48 6.48 2 12.02 2c2.65 0 5.14 1.03 7.01 2.9A9.87 9.87 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.48-7.48c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.48-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.48s1.08 2.88 1.23 3.08c.15.2 2.12 3.24 5.13 4.54.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/>
+        </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/skillbridgeconsultancy?igsh=MWw3Z3g2ZGY2OTgyZQ==" title="Instagram" aria-label="Instagram" class="social-icon instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.796.24 2.218.403a4.418 4.418 0 011.607.995 4.418 4.418 0 01.995 1.607c.163.422.349 1.048.403 2.218.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.796-.403 2.218a4.418 4.418 0 01-.995 1.607 4.418 4.418 0 01-1.607.995c-.422.163-1.048.349-2.218.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.796-.24-2.218-.403a4.418 4.418 0 01-1.607-.995 4.418 4.418 0 01-.995-1.607c-.163-.422-.349-1.048-.403-2.218C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.796.403-2.218a4.418 4.418 0 01.995-1.607 4.418 4.418 0 011.607-.995c.422-.163 1.048-.349 2.218-.403C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.012 7.052.07 5.78.128 4.897.313 4.09.635 3.286.957 2.592 1.356 2.05 1.898a6.576 6.576 0 00-1.264 1.264C.354 4.592.128 5.78.07 7.052.012 8.332 0 8.741 0 12s.012 3.668.07 4.948c.058 1.272.284 2.46.716 3.354.36.77.836 1.433 1.264 1.264.563.424 1.226.716 1.264.716.894.432 2.082.658 3.354.716 1.28.058 1.689.07 4.948.07s3.668-.012 4.948-.07c1.272-.058 2.46-.284 3.354-.716.77-.36 1.433-.836 1.264-1.264.424-.563.716-1.226.716-1.264.432-.894.658-2.082.716-3.354.058-1.28.07-1.689.07-4.948s-.012-3.668-.07-4.948c-.058-1.272-.284-2.46-.716-3.354-.36-.77-.836-1.433-1.264-1.264-.563-.424-1.226-.716-1.264-.716-.894-.432-2.082-.658-3.354-.716C15.668.012 15.259 0 12 0z"/>
+        <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998z"/>
+        <circle cx="18.406" cy="5.594" r="1.44"/>
+    </svg>
+</a>
+
+
+
+
+</div>
+
+            <p class="office-hours">
+                Office Hours<br>
+                Monday – Friday: 9:00 AM – 5:00 PM
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 SkillBridge Consultancy. All rights reserved.<br>
+        <br>
+    </div>
+    
+</footer>
+
+<!-- Verify Certificate Popup -->
+<div id="verifyPopup" class="verify-popup">
+  <div class="verify-box">
+    <h2>Verify Certificate</h2>
+    <p>Enter your reference number</p>
+
+    <input
+      type="text"
+      id="certInput"
+      placeholder="SBCINT-2026-512"
+    >
+
+    <div id="verifyStatus" class="verify-status"></div>
+
+    <button class="verify-btn" onclick="verifyCertificate()">
+      Verify
+    </button>
+
+    <button class="close-btn" onclick="closeVerifyPopup()">Close</button>
+  </div>
+</div>
+<script>
+function openVerifyPopup() {
+  document.getElementById("verifyPopup").style.display = "flex";
+  document.getElementById("verifyStatus").innerText = "";
+  document.getElementById("certInput").value = "";
+}
+
+function closeVerifyPopup() {
+  document.getElementById("verifyPopup").style.display = "none";
+}
+
+function verifyCertificate() {
+  const input = document.getElementById("certInput").value.trim();
+  const status = document.getElementById("verifyStatus");
+  const btn = document.querySelector(".verify-btn");
+
+  const pattern = /^SBCINT-2026-(\d+)$/;
+
+  if (!pattern.test(input)) {
+    status.style.color = "red";
+    status.innerText = "❌ Invalid format";
+    return;
+  }
+
+  const number = parseInt(input.match(pattern)[1]);
+
+  // Loading state
+  btn.classList.add("loading");
+  btn.disabled = true;
+  status.innerText = "Verifying...";
+
+  setTimeout(() => {
+    btn.classList.remove("loading");
+    btn.disabled = false;
+
+    if (number >= 512) {
+      status.style.color = "green";
+      status.innerText = "✅ Your certificate is VERIFIED";
+    } else {
+      status.style.color = "red";
+      status.innerText = "❌ Certificate NOT valid";
+    }
+  }, 1500); // fake loading delay
+}
+</script>
+
+</body>
+</html>
