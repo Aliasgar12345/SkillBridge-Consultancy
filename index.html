@@ -65,6 +65,189 @@
   }
 }
 </style>
+<style>
+/* =====================================
+   FINAL MOBILE + DESKTOP RESPONSIVE FIX
+   (INDEX.HTML ONLY)
+===================================== */
+
+/* ---------- GLOBAL SAFETY ---------- */
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- FIX HEADER OVERLAP ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 9999;
+}
+
+/* ---------- HERO SECTION FIX ---------- */
+.hero {
+  padding-top: 20px;
+}
+
+/* Prevent tag hiding under navbar */
+.hero-tag {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* ---------- BUTTON WIDTH FIX ---------- */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  max-width: 320px;   /* 🔥 prevents too-wide buttons */
+  width: 100%;
+}
+
+/* ---------- STATS FIX (500 / 8 / 95) ---------- */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  min-width: 120px;
+  text-align: center;
+}
+
+/* ---------- MOBILE FIXES ---------- */
+@media (max-width: 768px) {
+
+  /* Hero spacing */
+  .hero {
+    padding-top: 30px;
+  }
+
+  /* Center everything properly */
+  .hero .container {
+    text-align: center;
+  }
+
+  /* Buttons NOT too wide */
+  .hero-buttons a {
+    max-width: 280px;
+  }
+
+  /* Fix stats overflow (95% issue) */
+  .hero-stats {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+
+  /* Logo circle safety */
+  #about-image img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+/* ---------- DESKTOP SAFETY ---------- */
+@media (min-width: 769px) {
+
+  .hero-buttons a {
+    width: auto;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+  }
+}
+</style>
+<style>
+/* =====================================
+   FINAL BUTTON + STATS CENTER FIX
+   (INDEX.HTML ONLY)
+===================================== */
+
+/* Safety */
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- HERO BUTTONS FIX ---------- */
+.hero-buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;   /* 🔥 FORCE CENTER */
+  justify-content: center !important;
+  width: 100% !important;
+  gap: 14px;
+}
+
+.hero-buttons a {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 90% !important;            /* 🔥 SAME ON ALL DEVICES */
+  max-width: 300px !important;
+  margin: 0 auto !important;        /* 🔥 CENTER SAFETY */
+  text-align: center !important;
+}
+
+/* ---------- STATS FIX (500 / 8 / 95) ---------- */
+.hero-stats {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  overflow: hidden !important;      /* 🔥 stops overflow */
+  gap: 24px;
+}
+
+.stat-item {
+  width: 100% !important;
+  max-width: 280px !important;
+  text-align: center !important;
+}
+
+/* Fix 95% overflow */
+.stat-number {
+  font-size: 36px !important;
+  line-height: 1.2 !important;
+  word-break: keep-all !important;
+}
+
+/* ---------- DESKTOP FIX ---------- */
+@media (min-width: 769px) {
+
+  .hero-buttons {
+    flex-direction: row !important;
+  }
+
+  .hero-buttons a {
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  .hero-stats {
+    flex-direction: row !important;
+  }
+
+  .stat-item {
+    max-width: none !important;
+  }
+}
+</style>
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -324,7 +507,7 @@
             </div>
         </button>
 
-        <button class="domain-card" onclick="window.location.href='/domain/ai.html'">
+        <button class="domain-card" onclick="window.location.href='/domain/aiml.html'">
             <div class="domain-icon">🤖</div>
             <div class="domain-title-text">AI / Machine Learning</div>
             <div class="domain-duration">Duration: 1–3 Months</div>
@@ -566,7 +749,7 @@
             <div class="footer-logo">
                     <div class="footer-logo-icon">
                         <!-- Replace "MZ.jpeg" with actual image file name -->
-                        <img src="/assets/sb.jpeg" alt="Developer" />
+                        <!-- <img src="/assets/sb.jpeg" alt="Developer" /> -->
                     </div>
                 </div>
 
