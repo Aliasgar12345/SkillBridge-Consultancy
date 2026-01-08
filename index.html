@@ -7,6 +7,66 @@
     <title>SkillBridge Consultancy - Turning Potential into Profession</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+/* ===============================
+   FORCE LOGO TO ROUND (CIRCLE)
+   Header + Footer
+=============================== */
+
+#about-image img,
+.footer-logo-icon img {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;        /* makes it circle */
+  object-fit: cover;         /* prevents stretching */
+  display: block;
+
+  background: #fff;
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  #about-image img {
+    width: 32px;
+    height: 32px;
+  }
+}
+</style>
+<style>
+/* ===============================
+   FIX LOGO CUTTING ISSUE (FINAL)
+=============================== */
+
+/* Allow logo to breathe */
+#about-image,
+#image-placeholder {
+  overflow: visible !important;
+  flex-shrink: 0 !important;
+}
+
+/* Perfect circular logo */
+#about-image img {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  display: block;
+  margin-left: 2px;   /* prevents edge clipping */
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  #about-image img {
+    width: 32px;
+    height: 32px;
+  }
+}
+</style>
+
+<!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
 <!-- Standard favicon sizes -->
@@ -18,6 +78,8 @@
 
 <!-- Apple iOS -->
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+
 <body>
     <!-- Header -->
     <header>
@@ -81,7 +143,6 @@
     </nav>
 </header>
 <br>
-    <br>
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
@@ -664,6 +725,4 @@ function verifyCertificate() {
 </script>
 
 </body>
-
 </html>
-
