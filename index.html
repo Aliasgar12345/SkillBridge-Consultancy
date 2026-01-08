@@ -185,6 +185,29 @@ header nav.container {
     font-size: 11px;
   }
 }
+    /* ===== LOGO PERFECT CIRCLE (NO CUT) ===== */
+
+#about-image img {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  object-fit: contain;     /* 🔥 IMPORTANT */
+  background: #ffffff;    /* white safe background */
+  padding: 3px;           /* breathing space */
+
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #about-image img {
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+  }
+}
+
 </style>
 
 
@@ -849,3 +872,4 @@ function verifyCertificate() {
 </body>
 </html>
             
+
