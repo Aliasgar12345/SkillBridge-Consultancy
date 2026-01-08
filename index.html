@@ -185,27 +185,43 @@ header nav.container {
     font-size: 11px;
   }
 }
-    /* ===== LOGO PERFECT CIRCLE (NO CUT) ===== */
+   /* ===== PERFECT LOGO ALIGNMENT FIX ===== */
 
-#about-image img {
-  width: 36px;
-  height: 36px;
+#about-image {
+  display: flex;
+  align-items: center;   /* 🔥 text + logo same line */
+  gap: 10px;
+}
 
+/* Circular wrapper */
+#image-placeholder {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  object-fit: contain;     /* 🔥 IMPORTANT */
-  background: #ffffff;    /* white safe background */
-  padding: 3px;           /* breathing space */
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;      /* 🔥 forces perfect circle */
+  flex-shrink: 0;
+}
 
+/* Logo image */
+#image-placeholder img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;   /* 🔥 NO CUT */
   display: block;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  #about-image img {
+  #image-placeholder {
     width: 32px;
     height: 32px;
-    padding: 2px;
   }
+}
+
 }
 
 </style>
@@ -872,4 +888,5 @@ function verifyCertificate() {
 </body>
 </html>
             
+
 
