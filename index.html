@@ -8,246 +8,185 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-/* ===============================
-   FORCE LOGO TO ROUND (CIRCLE)
-   Header + Footer
-=============================== */
+/* =========================================
+   FINAL CLEAN RESPONSIVE FIX (ONE FILE)
+   HEADER + HERO + BUTTONS + STATS
+========================================= */
 
-#about-image img,
-.footer-logo-icon img {
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;        /* makes it circle */
-  object-fit: cover;         /* prevents stretching */
-  display: block;
-
-  background: #fff;
-}
-
-/* Mobile fine-tuning */
-@media (max-width: 768px) {
-  #about-image img {
-    width: 32px;
-    height: 32px;
-  }
-}
-</style>
-<style>
-/* ===============================
-   FIX LOGO CUTTING ISSUE (FINAL)
-=============================== */
-
-/* Allow logo to breathe */
-#about-image,
-#image-placeholder {
-  overflow: visible !important;
-  flex-shrink: 0 !important;
-}
-
-/* Perfect circular logo */
-#about-image img {
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;
-  object-fit: cover;
-
-  display: block;
-  margin-left: 2px;   /* prevents edge clipping */
-}
-
-/* Mobile adjustment */
-@media (max-width: 768px) {
-  #about-image img {
-    width: 32px;
-    height: 32px;
-  }
-}
-</style>
-<style>
-/* =====================================
-   FINAL MOBILE + DESKTOP RESPONSIVE FIX
-   (INDEX.HTML ONLY)
-===================================== */
-
-/* ---------- GLOBAL SAFETY ---------- */
+/* ---------- GLOBAL ---------- */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ---------- FIX HEADER OVERLAP ---------- */
+/* ---------- HEADER / NAVBAR ---------- */
 header {
   position: sticky;
   top: 0;
+  z-index: 1000;
   background: #fff;
-  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
 
-/* ---------- HERO SECTION FIX ---------- */
+header nav.container {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo + text */
+#about-image {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#about-image img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text h1 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.logo-text p {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  margin-left: auto;
+  list-style: none;
+}
+
+.get-started-btn {
+  margin-left: 20px;
+  padding: 10px 18px;
+}
+
+/* Hamburger (hidden on PC) */
+.hamburger {
+  display: none;
+}
+
+/* ---------- HERO SECTION ---------- */
 .hero {
-  padding-top: 20px;
+  background: #fff;
 }
 
-/* Prevent tag hiding under navbar */
-.hero-tag {
-  display: inline-block;
-  margin-top: 12px;
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px 60px;
 }
 
-/* ---------- BUTTON WIDTH FIX ---------- */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.hero-buttons a {
-  max-width: 320px;   /* 🔥 prevents too-wide buttons */
-  width: 100%;
-}
-
-/* ---------- STATS FIX (500 / 8 / 95) ---------- */
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.stat-item {
-  min-width: 120px;
+.hero-content {
   text-align: center;
 }
 
-/* ---------- MOBILE FIXES ---------- */
-@media (max-width: 768px) {
-
-  /* Hero spacing */
-  .hero {
-    padding-top: 30px;
-  }
-
-  /* Center everything properly */
-  .hero .container {
-    text-align: center;
-  }
-
-  /* Buttons NOT too wide */
-  .hero-buttons a {
-    max-width: 280px;
-  }
-
-  /* Fix stats overflow (95% issue) */
-  .hero-stats {
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  .stat-number {
-    font-size: 36px;
-  }
-
-  /* Logo circle safety */
-  #about-image img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+.hero-tag {
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
-/* ---------- DESKTOP SAFETY ---------- */
-@media (min-width: 769px) {
-
-  .hero-buttons a {
-    width: auto;
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-
-  .hero-stats {
-    flex-direction: row;
-  }
-}
-</style>
-<style>
-/* =====================================
-   FINAL BUTTON + STATS CENTER FIX
-   (INDEX.HTML ONLY)
-===================================== */
-
-/* Safety */
-* {
-  box-sizing: border-box;
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
-/* ---------- HERO BUTTONS FIX ---------- */
+.hero-description {
+  max-width: 720px;
+  margin: 0 auto 32px;
+}
+
+/* Buttons */
 .hero-buttons {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;   /* 🔥 FORCE CENTER */
-  justify-content: center !important;
-  width: 100% !important;
-  gap: 14px;
-}
-
-.hero-buttons a {
-  display: inline-flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 90% !important;            /* 🔥 SAME ON ALL DEVICES */
-  max-width: 300px !important;
-  margin: 0 auto !important;        /* 🔥 CENTER SAFETY */
-  text-align: center !important;
-}
-
-/* ---------- STATS FIX (500 / 8 / 95) ---------- */
-.hero-stats {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  overflow: hidden !important;      /* 🔥 stops overflow */
+  display: flex;
+  justify-content: center;
   gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
 }
 
 .stat-item {
-  width: 100% !important;
-  max-width: 280px !important;
-  text-align: center !important;
+  text-align: center;
 }
 
-/* Fix 95% overflow */
 .stat-number {
-  font-size: 36px !important;
-  line-height: 1.2 !important;
-  word-break: keep-all !important;
+  font-size: 40px;
 }
 
-/* ---------- DESKTOP FIX ---------- */
-@media (min-width: 769px) {
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+  header nav.container {
+    justify-content: space-between;
+  }
+
+  .nav-menu,
+  .get-started-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero .container {
+    padding: 40px 16px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
 
   .hero-buttons {
-    flex-direction: row !important;
+    flex-direction: column;
+    gap: 14px;
   }
 
   .hero-buttons a {
-    width: auto !important;
-    max-width: none !important;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .hero-stats {
-    flex-direction: row !important;
+    flex-direction: column;
+    gap: 24px;
   }
 
-  .stat-item {
-    max-width: none !important;
+  #about-image img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-text h1 {
+    font-size: 14px;
+  }
+
+  .logo-text p {
+    font-size: 11px;
   }
 }
 </style>
+
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -909,3 +848,4 @@ function verifyCertificate() {
 
 </body>
 </html>
+            
